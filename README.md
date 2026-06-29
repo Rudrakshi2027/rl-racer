@@ -83,3 +83,6 @@ Loads the saved rewards and waypoints arrays and plots two graphs using matplotl
 
 visualize.py — Pygame Live Demo
 Loads the trained Q-table and sets epsilon to 0 so the agent uses its learned policy with no random exploration. Opens a Pygame window showing the track as a grey corridor with yellow waypoint markers. The car is shown as a blue circle with a white arrow showing its heading direction. Every frame the agent picks the best action, the environment steps, and the car's new position is drawn. The top of the screen shows current waypoint, speed, and step count. When the episode ends it shows LAP COMPLETE in green or CRASHED in red.
+
+
+This project taught me that reinforcement learning is not about programming rules — it is about designing the right environment, the right reward, and letting the agent figure out the behaviour itself. The most important lesson was reward design. When we only rewarded speed the agent crashed every time. When we rewarded progress, checkpoints, and penalised walls the agent learned to actually navigate the track.
